@@ -1,2 +1,5 @@
-# Files to be ignored
-!*.py
+# Files to be ignored, ignore everything
+*
+# But not .py or .ipynb
+!.py
+!.ipynb
