@@ -1,5 +1,5 @@
 # Files to be ignored, ignore everything
 *
 # But not .py or .ipynb
-!.py
-!.ipynb
+!*.py
+!*.ipynb
