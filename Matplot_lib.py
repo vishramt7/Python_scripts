@@ -39,9 +39,22 @@ yvalues2 = np.cos(xvalues)
 #Histogram
 fifa = pd.read_csv('../matplotlib_tut/matplotlib_tutorial/fifa_data.csv')
 #print (fifa.head(5))
-histo_bins = list(range(0,110,10))
-print(histo_bins)
-plt.hist(fifa.Overall, bins=histo_bins )
-plt.xticks(histo_bins)
+#histo_bins = list(range(0,110,10))
+#print(histo_bins)
+#plt.hist(fifa.Overall, bins=histo_bins )
+#plt.xticks(histo_bins)
+
+#Pie chart
+#left = fifa.loc[fifa['Preferred Foot'] == 'Left'].count()[0]
+#right = fifa.loc[fifa['Preferred Foot'] == 'Right'].count()[0]
+#plt.pie([left, right], autopct='%.2f')
+
+#Box plots
+x = list(range(0,50,5))
+y = list(range(20,80,5))
+barcelona = fifa.loc[fifa.Club == 'FC Barcelona']['Overall']
+madrid =  fifa.loc[fifa.Club == 'Real Madrid']['Overall']
+labels = ['Barcelona', 'Real Madrid']
+plt.boxplot([barcelona, madrid], labels = labels)
 plt.show()
 #print(gas)
