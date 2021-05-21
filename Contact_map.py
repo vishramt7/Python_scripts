@@ -62,6 +62,7 @@ np_co_ordinates = np.array(Co_ordinates)
 #print (np_co_ordinates[None, :].shape, np_co_ordinates[:,None].shape)
 #m = np_co_ordinates[None, :] - np_co_ordinates[:, None]
 dist_matrix = np.sqrt (np.sum((np_co_ordinates[None, :] - np_co_ordinates[:, None])**2, -1))
+print ("The no. of dimensions are ", np.ndim(dist_matrix))
 result = np.where (dist_matrix <= CUTOFF_DIST )
 Contacts = list(zip(result[0], result[1]))
 C_alpha_contacts_matrix = []
