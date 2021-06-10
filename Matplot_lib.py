@@ -45,16 +45,17 @@ fifa = pd.read_csv('../matplotlib_tut/matplotlib_tutorial/fifa_data.csv')
 #plt.xticks(histo_bins)
 
 #Pie chart
-#left = fifa.loc[fifa['Preferred Foot'] == 'Left'].count()[0]
-#right = fifa.loc[fifa['Preferred Foot'] == 'Right'].count()[0]
-#plt.pie([left, right], autopct='%.2f')
+left = fifa.loc[fifa['Preferred Foot'] == 'Left'].count()[0]
+right = fifa.loc[fifa['Preferred Foot'] == 'Right'].count()[0]
+labels = ['Left','Right']
+plt.pie([left, right], autopct='%.2f', labels=labels,)
 
 #Box plots
-x = list(range(0,50,5))
-y = list(range(20,80,5))
-barcelona = fifa.loc[fifa.Club == 'FC Barcelona']['Overall']
-madrid =  fifa.loc[fifa.Club == 'Real Madrid']['Overall']
-labels = ['Barcelona', 'Real Madrid']
-plt.boxplot([barcelona, madrid], labels = labels)
+#x = list(range(0,50,5))
+#y = list(range(20,80,5))
+#barcelona = fifa.loc[fifa.Club == 'FC Barcelona']['Overall']
+#madrid =  fifa.loc[fifa.Club == 'Real Madrid']['Overall']
+#labels = ['Barcelona', 'Real Madrid']
+#plt.boxplot([barcelona, madrid], labels = labels)
 plt.show()
 #print(gas)
